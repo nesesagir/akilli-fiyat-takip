@@ -1,0 +1,54 @@
+# Render Blueprint (API)
+
+Docker web service. Set secrets in the Render dashboard (see `deploy/env.production.example`).
+
+services:
+  - type: web
+    name: akilli-fiyat-api
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: Swagger__Enabled
+        value: "true"
+      - key: Hangfire__Enabled
+        value: "false"
+      - key: PriceCheck__Enabled
+        value: "true"
+      - key: PriceCheck__IntervalMinutes
+        value: "30"
+      - key: Database__ApplyMigrationsOnStartup
+        value: "true"
+      - key: Admin__ResetPasswordOnStartup
+        value: "false"
+      - key: Email__Enabled
+        value: "true"
+      - key: Email__Host
+        value: smtp.gmail.com
+      - key: Email__Port
+        value: "587"
+      - key: Email__UseSsl
+        value: "true"
+      - key: Email__FromName
+        value: Akıllı Fiyat Takip
+      - key: ConnectionStrings__DefaultConnection
+        sync: false
+      - key: Cors__Origins__0
+        sync: false
+      - key: Admin__Email
+        sync: false
+      - key: Admin__Password
+        sync: false
+      - key: Admin__DisplayName
+        sync: false
+      - key: Email__Username
+        sync: false
+      - key: Email__Password
+        sync: false
+      - key: Email__FromAddress
+        sync: false

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F1982B97-10FC-435E-80BD-DF446E1A55F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTracker.Domain", "src\PriceTracker.Domain\PriceTracker.Domain.csproj", "{662D6DC9-7AAA-49F9-B6DB-A94E53CDF5C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTracker.Application", "src\PriceTracker.Application\PriceTracker.Application.csproj", "{999B3BB0-B2E7-4A70-A825-472CD2A67F2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTracker.Infrastructure", "src\PriceTracker.Infrastructure\PriceTracker.Infrastructure.csproj", "{DA6F1D53-749D-417E-9393-FC2FCC2B5768}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTracker.API", "src\PriceTracker.API\PriceTracker.API.csproj", "{A63F81C2-02E7-4A55-81F1-D08C59A7B585}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{662D6DC9-7AAA-49F9-B6DB-A94E53CDF5C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{662D6DC9-7AAA-49F9-B6DB-A94E53CDF5C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{662D6DC9-7AAA-49F9-B6DB-A94E53CDF5C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{662D6DC9-7AAA-49F9-B6DB-A94E53CDF5C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999B3BB0-B2E7-4A70-A825-472CD2A67F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999B3BB0-B2E7-4A70-A825-472CD2A67F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999B3BB0-B2E7-4A70-A825-472CD2A67F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999B3BB0-B2E7-4A70-A825-472CD2A67F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA6F1D53-749D-417E-9393-FC2FCC2B5768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA6F1D53-749D-417E-9393-FC2FCC2B5768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA6F1D53-749D-417E-9393-FC2FCC2B5768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA6F1D53-749D-417E-9393-FC2FCC2B5768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A63F81C2-02E7-4A55-81F1-D08C59A7B585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63F81C2-02E7-4A55-81F1-D08C59A7B585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63F81C2-02E7-4A55-81F1-D08C59A7B585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63F81C2-02E7-4A55-81F1-D08C59A7B585}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{662D6DC9-7AAA-49F9-B6DB-A94E53CDF5C8} = {F1982B97-10FC-435E-80BD-DF446E1A55F0}
+		{999B3BB0-B2E7-4A70-A825-472CD2A67F2B} = {F1982B97-10FC-435E-80BD-DF446E1A55F0}
+		{DA6F1D53-749D-417E-9393-FC2FCC2B5768} = {F1982B97-10FC-435E-80BD-DF446E1A55F0}
+		{A63F81C2-02E7-4A55-81F1-D08C59A7B585} = {F1982B97-10FC-435E-80BD-DF446E1A55F0}
+	EndGlobalSection
+EndGlobal

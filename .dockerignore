@@ -1,0 +1,12 @@
+.git
+.github
+**/.vs
+**/bin
+**/obj
+**/node_modules
+**/.next
+**/out
+**/.env
+**/.env.local
+**/postgres-data
+*.md

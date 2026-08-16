@@ -1,0 +1,34 @@
+@PriceTracker.API_HostAddress = http://localhost:5080
+
+### Kullanıcı oluştur
+POST {{PriceTracker.API_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "email": "demo@example.com",
+  "password": "Demo1234!",
+  "displayName": "Demo Kullanıcı"
+}
+
+###
+GET {{PriceTracker.API_HostAddress}}/api/users/{{userId}}
+
+### Ürün takibi ekle
+POST {{PriceTracker.API_HostAddress}}/api/trackeditems
+Content-Type: application/json
+
+{
+  "userId": "{{userId}}",
+  "productUrl": "https://www.example.com/urun/beyaz-yuruyus-ayakkabisi-38",
+  "targetPrice": 1499.90,
+  "title": "Beyaz yürüyüş ayakkabısı (38)"
+}
+
+###
+GET {{PriceTracker.API_HostAddress}}/api/dashboard/{{userId}}
+
+### Fiyat kazı (scrape)
+POST {{PriceTracker.API_HostAddress}}/api/trackeditems/{{itemId}}/check
+
+###
+POST {{PriceTracker.API_HostAddress}}/api/scraper/check-all

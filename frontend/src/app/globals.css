@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Modern slate + tek teal vurgu (yeşil baskın değil) */
+  --background: #f4f5f7;
+  --foreground: #111827;
+  --panel: rgba(255, 255, 255, 0.82);
+  --muted: #6b7280;
+  --accent: #0f766e;
+  --accent-soft: #e5e7eb;
+  --border: rgba(17, 24, 39, 0.1);
+  --rise: #dc2626;
+  --fall: #059669;
+  --glow: rgba(15, 118, 110, 0.08);
+}
+
+.dark {
+  --background: #0b0f14;
+  --foreground: #f3f4f6;
+  --panel: rgba(22, 27, 34, 0.88);
+  --muted: #9ca3af;
+  --accent: #2dd4bf;
+  --accent-soft: rgba(45, 212, 191, 0.12);
+  --border: rgba(255, 255, 255, 0.1);
+  --rise: #f87171;
+  --fall: #34d399;
+  --glow: rgba(45, 212, 191, 0.06);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.field-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: #111827;
+  caret-color: #111827;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  outline: none;
+}
+
+.field-input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.field-input:focus {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.dark .field-input {
+  background: #161b22;
+  color: #f9fafb;
+  caret-color: #f9fafb;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.dark .field-input::placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
+.glass {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.product-card {
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.product-card .glass {
+  transition:
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.45s ease;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--accent-soft);
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 1.4s infinite;
+}
+
+.dark .skeleton::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.06),
+    transparent
+  );
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
