@@ -59,3 +59,7 @@ backend/    API
 frontend/   arayüz
 deploy/     yayın notları
 ```
+
+## License
+
+MIT
