@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base =
-    process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3001";
+    process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://akilli-fiyat-takip.vercel.app";
 
   return [
     {

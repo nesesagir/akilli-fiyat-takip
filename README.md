@@ -27,11 +27,17 @@ cp .env.example .env
 docker compose up -d --build
 ```
 
-- Site: http://localhost:3001  
-- API: http://localhost:5080  
-- Swagger: http://localhost:5080/swagger  
+- Site: http://localhost:3001
+- API: http://localhost:5080
+- Swagger: http://localhost:5080/swagger
 
 Kapatmak için: `docker compose down`
+
+## Canlı Versiyon
+
+- Demo: https://akilli-fiyat-takip.vercel.app
+- API: (Render üzerinde çalışıyor)
+- Swagger: (Canlı versiyonda kapalı)
 
 ## Ortam değişkenleri
 

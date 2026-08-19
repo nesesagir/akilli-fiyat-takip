@@ -1,13 +1,9 @@
 # Yayınlama
 
-Bu proje yerelde Docker Compose ile çalışır. İnternete açmak için tipik kurulum:
+1. **PostgreSQL** — Neon (Frankfurt). Connection string’i **Host=...;Database=...;SSL Mode=Require** formatında Render’a yapıştır. `postgresql://...?...=` URI kullanma (panelde bozuluyor).
+2. **API** — Render Docker (`backend/Dockerfile`). `Hangfire__Enabled=false`, fiyat kontrolü `PriceCheck` BackgroundService.
+3. **Web** — Vercel (`frontend`), `NEXT_PUBLIC_API_URL` = Render API adresi.
 
-1. **PostgreSQL** — Neon (bağlantıda **pooler olmayan** connection string kullan; Hangfire için gerekli)
-2. **API** — Render (Docker, kökteki `backend/Dockerfile`)
-3. **Web** — Vercel (`frontend` klasörü)
+`healthCheckPath: /health` sadece hosting kontrolüdür; Demo adresi site URL’sidir.
 
-Değişken listesi: `env.production.example`
-
-Frontend URL’ini aldıktan sonra API tarafında `Cors__Origins__0` değerini o adrese ayarla.
-
-Kökteki `render.yaml` Render için başlangıç şablonudur. Oradaki `healthCheckPath: /health` hosting’in “servis ayakta mı?” kontrolüdür; kullanıcıya gösterilen demo adresi değildir.
+Değişken şablonu: `env.production.example`
