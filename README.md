@@ -1,6 +1,6 @@
-# Akıllı Fiyat Takip
+# Akıllı Fiyat Takip ve Analiz
 
-E-ticaret sitelerindeki ürün linklerini kaydedip fiyatını takip eden bir web paneli. Hedef fiyata düşünce kullanıcıya e-posta gider.
+E-ticaret sitelerindeki ürün linklerini kaydedip fiyatını takip eden bir web sitesi. Hedef fiyata düşünce kullanıcıya e-posta gider.
 
 ## Ne yapıyor?
 
